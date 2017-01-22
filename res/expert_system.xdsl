@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- This network was created in GeNIe Academic, which can be used for educational and research purposes only -->
+<smile version="1.0" id="Network1" numsamples="1000" discsamples="10000">
+	<nodes>
+		<cpt id="Gender">
+			<state id="Male" />
+			<state id="Female" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Technical_Interests">
+			<state id="Yes" />
+			<state id="No" />
+			<parents>Gender</parents>
+			<probabilities>0.7 0.3 0.3 0.7</probabilities>
+		</cpt>
+		<cpt id="Demand_For_Specialists">
+			<state id="Yes" />
+			<state id="No" />
+			<probabilities>0.8 0.2</probabilities>
+		</cpt>
+		<cpt id="Sport_Interests">
+			<state id="Yes" />
+			<state id="No" />
+			<parents>Gender</parents>
+			<probabilities>0.8 0.2 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Sport_Skills">
+			<state id="Good" />
+			<state id="Average" />
+			<state id="Bad" />
+			<parents>Sport_Interests</parents>
+			<probabilities>0.4 0.4 0.2 0.1 0.2 0.7</probabilities>
+		</cpt>
+		<cpt id="Academy_Of_Psyhical_Education">
+			<state id="DefinitelyYes" />
+			<state id="RatherYes" />
+			<state id="RatherNo" />
+			<state id="DefinitelyNo" />
+			<parents>Sport_Skills Sport_Interests</parents>
+			<probabilities>1 0 0 0 0.7 0.3 0 0 0.6 0.3 0.1 0 0.2 0.3 0.3 0.2 0.1 0.2 0.4 0.3 0 0 0 1</probabilities>
+		</cpt>
+		<cpt id="Language_Skills">
+			<state id="Good" />
+			<state id="Average" />
+			<state id="Bad" />
+			<probabilities>0.3534690726623565 0.318440606002123 0.3280903213355205</probabilities>
+		</cpt>
+		<cpt id="Political_Interests">
+			<state id="Yes" />
+			<state id="No" />
+			<parents>Gender</parents>
+			<probabilities>0.8 0.2 0.6 0.4</probabilities>
+		</cpt>
+		<cpt id="Journalism">
+			<state id="DefinitelyYes" />
+			<state id="RatherYes" />
+			<state id="RatherNo" />
+			<state id="DefinitelyNo" />
+			<parents>Language_Skills Political_Interests Sport_Interests</parents>
+			<probabilities>0.8 0.1 0.07000000000000001 0.02999999999999994 0.7 0.2 0.07000000000000001 0.03 0.6 0.3 0.07000000000000001 0.03 0.3 0.6 0.05 0.05 0.7 0.2 0.05 0.05 0.65 0.25 0.05 0.05 0.2 0.2 0.4 0.2 0.1 0.2 0.3 0.4 0.05 0.05 0.6 0.3 0.03 0.07000000000000001 0.3 0.6 0.03 0.07000000000000001 0.2 0.7 0.03 0.07000000000000001 0.1 0.8</probabilities>
+		</cpt>
+		<cpt id="Mathematical_Skills">
+			<state id="Good" />
+			<state id="Average" />
+			<state id="Bad" />
+			<probabilities>0.5 0.5 0</probabilities>
+		</cpt>
+		<cpt id="Acting_Skills">
+			<state id="Good" />
+			<state id="Average" />
+			<state id="Bad" />
+			<probabilities>0.3333333333333333 0.3333333333333333 0.3333333333333334</probabilities>
+		</cpt>
+		<cpt id="Analytical_Thinking">
+			<state id="Good" />
+			<state id="Average" />
+			<state id="Bad" />
+			<probabilities>0.5 0.5 0</probabilities>
+		</cpt>
+		<cpt id="Technical_University">
+			<state id="DefinitelyYes" />
+			<state id="RatherYes" />
+			<state id="RatherNo" />
+			<state id="DefinitelyNo" />
+			<parents>Mathematical_Skills Analytical_Thinking Demand_For_Specialists Technical_Interests</parents>
+			<probabilities>1 0 0 0 0.7 0.3 0 0 1 0 0 0 0.6 0.3 0.1 0 1 0 0 0 0.7 0.3 0 0 1 0 0 0 0.6 0.3 0.1 0 0.8 0.2 0 0 0.6 0.3 0.1 0 0.4 0.5 0.1 0 0.2 0.3 0.4 0.1 0.4 0.3 0.3 0 0.3 0.3 0.3 0.1 0.3 0.3 0.3 0.1 0.2 0.3 0.3 0.2 0.3 0.3 0.3 0.1 0.2 0.3 0.3 0.2 0.3 0.3 0.3 0.1 0.2 0.3 0.3 0.2 0.3 0.3 0.3 0.1 0.2 0.3 0.3 0.2 0.3 0.3 0.3 0.1 0.2 0.3 0.3 0.2 0.2 0.3 0.3 0.2 0.1 0.3 0.3 0.3 0.2 0.1 0.3 0.4 0 0 0.2 0.8 0.2 0.2 0.3 0.3 0.2 0.2 0.3 0.3 0.2 0.2 0.3 0.3 0.2 0.2 0.3 0.3 0 0.1 0.3 0.6 0 0 0 1 0 0 0.3 0.7 0 0 0 1</probabilities>
+		</cpt>
+		<cpt id="Working_Currently">
+			<state id="Yes" />
+			<state id="No" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Study_Mode">
+			<state id="FullTime" />
+			<state id="PartTime" />
+			<parents>Working_Currently</parents>
+			<probabilities>0.3 0.7 0.9 0.1</probabilities>
+		</cpt>
+		<cpt id="Programming_Skills">
+			<state id="Good" />
+			<state id="Average" />
+			<state id="Bad" />
+			<probabilities>0.5 0.5 0</probabilities>
+		</cpt>
+		<cpt id="IT_Studies">
+			<state id="DefinitelyYes" />
+			<state id="RatherYes" />
+			<state id="RatherNo" />
+			<state id="DefinitelyNo" />
+			<parents>Mathematical_Skills Analytical_Thinking Programming_Skills Demand_For_Specialists</parents>
+			<probabilities>1 0 0 0 0.8 0.2 0 0 0.9 0.1 0 0 0.7 0.2 0.1 0 0.3 0.4 0.2 0.09999999999999992 0.2 0.3 0.3 0.2 0.6 0.3 0.05 0.05 0.5 0.3 0.05 0.15 0.6 0.3 0.05 0.05 0.5 0.4 0.05 0.05 0.3 0.3 0.3 0.09999999999999998 0.3 0.3 0.3 0.09999999999999998 0.4 0.3 0.2 0.1 0.4 0.3 0.2 0.1 0.3 0.4 0.2 0.1 0.3 0.4 0.2 0.1 0.2 0.4 0.3 0.1 0.2 0.4 0.3 0.1 0.4 0.3 0.2 0.1 0.4 0.3 0.2 0.1 0.3 0.4 0.2 0.1 0.3 0.4 0.2 0.1 0.2 0.4 0.3 0.1 0.2 0.4 0.3 0.1 0.4 0.3 0.2 0.1 0.3 0.4 0.2 0.1 0.2 0.4 0.3 0.1 0.2 0.3 0.3 0.2 0.2 0.3 0.3 0.2 0.2 0.3 0.3 0.2 0.1 0.3 0.4 0.2 0.1 0.3 0.4 0.2 0.1 0.2 0.4 0.3 0.1 0.2 0.4 0.3 0.1 0.2 0.3 0.4 0.1 0.2 0.3 0.4 0.4 0.5 0.1 0 0.4 0.4 0.2 0 0.4 0.4 0.2 0 0.4 0.3 0.3 0 0.2 0.4 0.3 0.1 0.2 0.3 0.3 0.2 0.2 0.3 0.3 0.2 0.2 0.2 0.3 0.3 0.1 0.2 0.3 0.4 0.1 0.2 0.3 0.4 0 0.1 0.2 0.7 0 0.1 0.2 0.7 0.2 0.3 0.3 0.2 0.1 0.2 0.4 0.3 0 0.1 0.2 0.7 0 0 0.1 0.9 0 0 0.2 0.8 0 0 0 1</probabilities>
+		</cpt>
+		<cpt id="Acting_School">
+			<state id="DefinitelyYes" />
+			<state id="RatherYes" />
+			<state id="RatherNo" />
+			<state id="DefinitelyNo" />
+			<parents>Acting_Skills Language_Skills</parents>
+			<probabilities>0.6 0.3 0.1 0 0.55 0.3 0.1 0.04999999999999996 0.5 0.35 0.1 0.05000000000000002 0.3 0.4 0.2 0.1 0.2 0.4 0.3 0.1 0.1 0.3 0.4 0.2 0.05 0.1 0.35 0.5 0.05 0.1 0.3 0.55 0 0.1 0.3 0.6</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 2.1.1104.0 ACADEMIC" name="Network1" faultnameformat="nodestate">
+			<node id="Gender">
+				<name>Gender</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>885 678 1012 727</position>
+			</node>
+			<node id="Demand_For_Specialists">
+				<name>The Demand for Specialists</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>532 69 667 128</position>
+			</node>
+			<node id="Technical_Interests">
+				<name>Technical Interests</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>803 566 914 613</position>
+			</node>
+			<node id="Political_Interests">
+				<name>Political Interests</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>482 566 606 613</position>
+			</node>
+			<node id="Acting_Skills">
+				<name>Acting Skills</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>244 466 368 517</position>
+			</node>
+			<node id="Mathematical_Skills">
+				<name>Mathematical Skills</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>701 451 831 499</position>
+			</node>
+			<node id="Language_Skills">
+				<name>Language Skills</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>368 388 496 435</position>
+			</node>
+			<node id="Analytical_Thinking">
+				<name>Analythical Thinking Skills</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>910 455 1033 507</position>
+			</node>
+			<node id="Sport_Interests">
+				<name>Sport Interests</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>982 563 1109 607</position>
+			</node>
+			<node id="Sport_Skills">
+				<name>Sport Skills</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1116 451 1227 500</position>
+			</node>
+			<node id="Academy_Of_Psyhical_Education">
+				<name>Academy Of Psyhical Education</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1089 229 1226 281</position>
+			</node>
+			<node id="Technical_University">
+				<name>Technical University</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>844 224 978 277</position>
+			</node>
+			<node id="Journalism">
+				<name>Journalism</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>455 241 582 292</position>
+			</node>
+			<node id="Study_Mode">
+				<name>Study Mode</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>804 77 935 127</position>
+			</node>
+			<node id="Working_Currently">
+				<name>Working Currently</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1134 83 1264 138</position>
+			</node>
+			<node id="IT_Studies">
+				<name>IT Studies</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>665 231 786 287</position>
+			</node>
+			<node id="Programming_Skills">
+				<name>Programming Skills</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>554 443 667 499</position>
+			</node>
+			<node id="Acting_School">
+				<name>Acting School</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>236 248 364 303</position>
+			</node>
+		</genie>
+	</extensions>
+</smile>
