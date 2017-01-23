@@ -32,8 +32,7 @@ public class MainWindow {
 	public MainWindow() throws CloneNotSupportedException {
 		bayesNetwork = new Network();
 		bayesNetwork.readFile("res/expert_system.xdsl");
-		// currentNetwork = (Network) bayesNetwork.clone();
-		currentNetwork = bayesNetwork;
+		currentNetwork = (Network) bayesNetwork.clone();
 	}
 
 	/**
@@ -87,6 +86,7 @@ public class MainWindow {
 		});
 		btnMale.setText("Male");
 
+
 		btnFemale = new Button(grpGender, SWT.BORDER | SWT.RADIO);
 		btnFemale.addSelectionListener(new SelectionAdapter() {
 			@Override
@@ -95,6 +95,9 @@ public class MainWindow {
 			}
 		});
 		btnFemale.setText("Female");
+		
+		btnMale.setSelection(false);
+		btnFemale.setSelection(false);
 
 		Group grpActing = new Group(shell, SWT.NONE);
 		grpActing.setText("Acting Skills");
@@ -346,39 +349,34 @@ public class MainWindow {
 				rathYes[0] = values[1] * 100;
 				rathNo[0] = values[2] * 100;
 				defNo[0] = values[3] * 100;
-				
+
 				values = currentNetwork.getNodeValue("Journalism");
 				defYes[1] = values[0] * 100;
 				rathYes[1] = values[1] * 100;
 				rathNo[1] = values[2] * 100;
 				defNo[1] = values[3] * 100;
-				
+
 				values = currentNetwork.getNodeValue("Technical_University");
 				defYes[2] = values[0] * 100;
 				rathYes[2] = values[1] * 100;
 				rathNo[2] = values[2] * 100;
 				defNo[2] = values[3] * 100;
-				
+
 				values = currentNetwork.getNodeValue("IT_Studies");
 				defYes[3] = values[0] * 100;
 				rathYes[3] = values[1] * 100;
 				rathNo[3] = values[2] * 100;
 				defNo[3] = values[3] * 100;
-				
+
 				values = currentNetwork.getNodeValue("Acting_School");
 				defYes[4] = values[0] * 100;
 				rathYes[4] = values[1] * 100;
 				rathNo[4] = values[2] * 100;
 				defNo[4] = values[3] * 100;
-					
-				try {
-					results = new Results(Display.getDefault(), defYes, rathYes, rathNo, defNo);
-					results.open();
-					currentNetwork = (Network) bayesNetwork.clone();
-				} catch (CloneNotSupportedException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
+
+				results = new Results(Display.getDefault(), defYes, rathYes, rathNo, defNo);
+				results.open();
+
 			}
 		});
 
@@ -395,6 +393,17 @@ public class MainWindow {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
+				btnMale.setSelection(false);
+				btnFemale.setSelection(false);
+				scaleActing.setSelection(1);
+				scaleLang.setSelection(1);
+				scaleProg.setSelection(1);
+				scaleMath.setSelection(1);
+				scaleAnalyth.setSelection(1);
+				scaleSports.setSelection(1);
+				btnPoliticalInterests.setSelection(false);
+				btnTechnicalInterrests.setSelection(false);
+				btnSportInterests.setSelection(false);
 			}
 		});
 
